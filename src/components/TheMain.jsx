@@ -7,7 +7,7 @@ export default function TheMain(){
 
     const publishedPosts = posts.filter((post) => post.published === true);
 
-    const cardLength = publishedPosts.length -2
+    const cardLength = publishedPosts.length -1
 
     const [active, setActive] = useState(0);
 
@@ -16,6 +16,8 @@ export default function TheMain(){
             return "hidden"
         }
     }
+
+    console.log(active);
 
 
     return(
@@ -31,11 +33,11 @@ export default function TheMain(){
             class={prova(i)}
             />
         ))}
-        <TheCounter 
-        setActive = {setActive}
-        active = {active}
-        cardLength = {cardLength}
-        />
+            <TheCounter 
+            setActive = {setActive}
+            active = {active}
+            cardLength = {cardLength}
+            />
         </div>
     )
 

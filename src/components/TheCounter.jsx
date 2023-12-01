@@ -5,7 +5,7 @@ export default function Counter(props){
         let control = props.cardLength
         let nuovoValore = props.active
 
-        if(nuovoValore <= control){
+        if(nuovoValore < control){
             nuovoValore = props.active + 1
             props.setActive(nuovoValore)
         }else{
@@ -39,8 +39,8 @@ export default function Counter(props){
     return (
         <div className="container mx-auto text-center mt-5">
             <div className="flex justify-center gap-4">
-                <button className="bg-red-400 text-xl px-4 py-3" onClick={decrement}>Decrementa</button>
-                <button className="bg-blue-400 text-xl px-4 py-3" onClick={increment}>Incrementa</button>
+                <button className="bg-red-400 text-xl px-4 py-3" onClick={decrement}>Prev</button>
+                <button className="bg-blue-400 text-xl px-4 py-3" onClick={increment}>Next</button>
             </div>
         </div>
     )
